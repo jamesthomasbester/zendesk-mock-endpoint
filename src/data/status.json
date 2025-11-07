@@ -1,0 +1,18 @@
+{
+    "statuses": [
+        "Awaiting Payment",
+        "Paid / Not Approved",
+        "Approved / Not Paid",
+        "Awaiting Shipment",
+        "Shipped",
+        "Completed",
+        "Cancelled",
+        "On hold",
+        "Expired",
+        "No Pharmacy",
+        "Pharmacy Partially out of Stock",
+        "Unable to Dispense",
+        "Processing Dispense",
+        "Refunded"
+    ]
+}
