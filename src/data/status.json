@@ -1,18 +1,22 @@
 {
     "statuses": [
-        "Awaiting Payment",
-        "Paid / Not Approved",
-        "Approved / Not Paid",
-        "Awaiting Shipment",
-        "Shipped",
-        "Completed",
-        "Cancelled",
-        "On hold",
-        "Expired",
-        "No Pharmacy",
-        "Pharmacy Partially out of Stock",
-        "Unable to Dispense",
+        "In Transit",
+        "Awaiting Collection",
         "Processing Dispense",
-        "Refunded"
+        "Delivered",
+        "Awaiting Shipment",
+        "Approved / Not Paid",
+        "Not Paid / Not Approved",
+        "Approved / Not Paid Disputed",
+        "Out Of Stock",
+        "Incorrect Interval",
+        "Dispensed",
+        "Interval Time",
+        "Out of Repeats",
+        "Script Expired",
+        "Paid/Not Approved",
+        "Payment Confirmed",
+        "Pharmacy Out of Stock",
+        "Unable to Dispense (UTD)"
     ]
 }
