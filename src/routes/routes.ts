@@ -18,10 +18,10 @@ type trackingResponse = {
 
 const router = Router();
 
-router.get("/order/tracking", async (req, res) => {
+router.get("/order/tracking/:id", async (req, res) => {
   try {
-    const body: RequestBody = req.body;
-    if (body?.orderNumber) {
+    const id = req.params.id;
+    if (id) {
       const pharmacy =
         data.Pharmacy[Math.floor(Math.random() * data.Pharmacy.length)];
       res.status(200).json({
@@ -31,7 +31,8 @@ router.get("/order/tracking", async (req, res) => {
         state: pharmacy.state,
         zip_code: pharmacy.zip_code,
         phone: pharmacy.phone,
-        orderNumber: body?.orderNumber
+        orderNumber: id,
+        trackingUrl: pharmacy.tracking_url
       });
     } else {
       res.status(400).json({
@@ -49,10 +50,10 @@ router.get("/order/tracking", async (req, res) => {
   }
 });
 
-router.get("/order/status", async (req, res) => {
+router.get("/order/status/:id", async (req, res) => {
   try {
-    const body: RequestBody = req.body;
-    if (body?.orderNumber) {
+    const id = req.params.id;
+    if (id) {
       res
         .status(200)
         .json({
