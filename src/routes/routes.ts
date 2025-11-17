@@ -19,12 +19,12 @@ type trackingResponse = {
 
 const router = Router();
 
-router.get("/order/tracking/:id", async (req, res) => {
+router.post("/order/tracking/", async (req, res) => {
   try {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
     if (token && token === "MockToken") {
-      const id = req.params.id;
+      const id = req.body.order_code;
       if (id.startsWith("MPRS")) {
         const order = fullOrders.orders.find((item) => item.order_code === id);
         if (order) {
@@ -60,12 +60,12 @@ router.get("/order/tracking/:id", async (req, res) => {
   }
 });
 
-router.get("/order/status/:id", async (req, res) => {
+router.post("/order/status/", async (req, res) => {
   try {
     const authHeader = req.headers["authorization"];
     const token = authHeader && authHeader.split(" ")[1];
     if (token && token === "MockToken") {
-      const id = req.params.id;
+      const id = req.body.order_code;
       if (id.startsWith("MPRS")) {
         const order = fullOrders.orders.find((item) => item.order_code === id);
         if (order) {
